@@ -18,7 +18,7 @@ theme:
 nav:
   - About: 'index.md'
   - IMS certifications: 'certifications.md'
-  - Repositories:
-      - 'PHP libraries': 'repositories/libraries.md'
-      - 'Symfony bundle': 'repositories/sfbundle.md'
-  - DevKit: 'devkit.md'
+  - LTI 1.3 Libraries:
+      - 'Core library': 'libraries/lib-lti1p3-core/README.md'
+  - 'LTI 1.3 Symfony bundle': 'symfony_bundle.md'
+  - 'LTI 1.3 DevKit': 'devkit.md'
