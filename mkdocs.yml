@@ -16,9 +16,9 @@ theme:
       - navigation.expand
 
 nav:
-  - About: 'index.md'
-  - IMS certifications: 'certifications.md'
+  - About: 'docs/index.md'
+  - IMS certifications: 'docs/certifications.md'
   - Repositories:
-      - 'PHP libraries': 'repositories/libraries.md'
-      - 'Symfony bundle': 'repositories/sfbundle.md'
-  - DevKit: 'devkit.md'
+      - 'PHP libraries': 'docs/repositories/libraries.md'
+      - 'Symfony bundle': 'docs/repositories/sfbundle.md'
+  - DevKit: 'docs/devkit.md'
