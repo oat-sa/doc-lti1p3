@@ -7,8 +7,8 @@ theme:
   name: material
   palette:
     scheme: slate
-    logo: 'assets/logo.png'
-    favicon: 'assets/favicon.png'
+    logo: 'assets/images/logo.png'
+    favicon: 'assets/images/favicon.png'
     features:
       - navigation.instant
       - navigation.tracking
@@ -20,5 +20,10 @@ nav:
   - IMS certifications: 'certifications.md'
   - LTI 1.3 Libraries:
       - 'Core library': 'libraries/lib-lti1p3-core/README.md'
+      - 'AGS library': 'libraries/lib-lti1p3-ags/README.md'
+      - 'Basic outcome library': 'libraries/lib-lti1p3-basic-outcome/README.md'
+      - 'Deep linking library': 'libraries/lib-lti1p3-deep-linking/README.md'
+      - 'NRPS library': 'libraries/lib-lti1p3-nrps/README.md'
+      - 'Proctoring library': 'libraries/lib-lti1p3-proctoring/README.md'
   - 'LTI 1.3 Symfony bundle': 'symfony_bundle.md'
   - 'LTI 1.3 DevKit': 'devkit.md'
