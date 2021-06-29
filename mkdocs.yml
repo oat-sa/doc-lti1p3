@@ -1,6 +1,8 @@
 site_name: LTI 1.3 PHP framework
 site_url: https://oat-sa.github.io/doc-lti1p3/
 
+docs_dir: 'docs'
+
 theme:
   name: material
   palette:
