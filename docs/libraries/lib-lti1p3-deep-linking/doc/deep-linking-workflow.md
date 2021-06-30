@@ -77,7 +77,7 @@ $message = $builder->buildDeepLinkingLaunchRequest(
 
 ### Launch the message
 
-As a result of the build, you get a [LtiMessageInterface](../https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/LtiMessageInterface.php) instance that has to be used in the following ways:
+As a result of the build, you get a [LtiMessageInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php) instance that has to be used in the following ways:
 
 ```php
 <?php
@@ -236,7 +236,7 @@ $message = $builder->buildDeepLinkingLaunchResponse(
 
 ### Launch the message
 
-As a result of the build, you get a [LtiMessageInterface](../https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/LtiMessageInterface.php) instance that [has to be sent as a form POST](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message):
+As a result of the build, you get a [LtiMessageInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php) instance that [has to be sent as a form POST](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message):
 
 ```php
 <?php

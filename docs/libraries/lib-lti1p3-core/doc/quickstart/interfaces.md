@@ -49,7 +49,7 @@ $registrationRepository = new class implements RegistrationRepositoryInterface
    }
 };
 ```
-**Note**: you can find a simple implementation example of this interface in the method `createTestRegistrationRepository()` of the [DomainTestingTrait](../../tests/Traits/DomainTestingTrait.php).
+**Note**: you can find a simple implementation example of this interface in the method `createTestRegistrationRepository()` of the [DomainTestingTrait](https://github.com/oat-sa/lib-lti1p3-core/blob/master/tests/Traits/DomainTestingTrait.php).
 
 ### User authenticator interface
 
@@ -78,7 +78,7 @@ $userAuthenticator = new class implements UserAuthenticatorInterface
 ```
 **Notes**:
 
-- you can find a simple implementation example of this interface in the method `createTestUserAuthenticator()` of the [SecurityTestingTrait](../../tests/Traits/SecurityTestingTrait.php).
+- you can find a simple implementation example of this interface in the method `createTestUserAuthenticator()` of the [SecurityTestingTrait](https://github.com/oat-sa/lib-lti1p3-core/blob/master/tests/Traits/SecurityTestingTrait.php).
 - you can find a ready to use `UserAuthenticationResultInterface` implementation is available in [UserAuthenticationResult](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/User/Result/UserAuthenticationResult.php)
 
 ## Optional interfaces
