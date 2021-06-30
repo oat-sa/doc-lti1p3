@@ -15,17 +15,6 @@ theme:
       - navigation.sections
       - navigation.expand
 
-markdown_extensions:
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - pymdownx.inlinehilite:
-  - pymdownx.superfences:
-      extend_pygments_lang:
-        - name: php
-          lang: php
-          options:
-            startinline: true
-
 nav:
   - Overview: 'index.md'
   - IMS:
