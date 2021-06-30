@@ -15,15 +15,33 @@ theme:
       - navigation.sections
       - navigation.expand
 
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - pymdownx.inlinehilite:
+  - pymdownx.superfences:
+      extend_pygments_lang:
+        - name: php
+          lang: php
+          options:
+            startinline: true
+
 nav:
-  - About: 'index.md'
-  - IMS certifications: 'certifications.md'
-  - LTI 1.3 Libraries:
-      - 'Core library': 'libraries/lib-lti1p3-core/README.md'
-      - 'AGS library': 'libraries/lib-lti1p3-ags/README.md'
-      - 'Basic outcome library': 'libraries/lib-lti1p3-basic-outcome/README.md'
-      - 'Deep linking library': 'libraries/lib-lti1p3-deep-linking/README.md'
-      - 'NRPS library': 'libraries/lib-lti1p3-nrps/README.md'
-      - 'Proctoring library': 'libraries/lib-lti1p3-proctoring/README.md'
+  - Overview: 'index.md'
+  - IMS:
+    - 'Certifications': 'ims/certifications.md'
+    - 'Specifications': 'ims/specifications.md'
+  - 'LTI 1.3 PHP libraries':
+    - 'Core library':
+      - 'Overview': 'libraries/lib-lti1p3-core/README.md'
+      - 'Quick start':
+        - 'Configuration': 'libraries/lib-lti1p3-core/doc/quickstart/configuration.md'
+        - 'Interfaces': 'libraries/lib-lti1p3-core/doc/quickstart/interfaces.md'
+        - 'JWKS': 'libraries/lib-lti1p3-core/doc/quickstart/jwks.md'
+    - 'AGS library': 'libraries/lib-lti1p3-ags/README.md'
+    - 'Basic outcome library': 'libraries/lib-lti1p3-basic-outcome/README.md'
+    - 'Deep linking library': 'libraries/lib-lti1p3-deep-linking/README.md'
+    - 'NRPS library': 'libraries/lib-lti1p3-nrps/README.md'
+    - 'Proctoring library': 'libraries/lib-lti1p3-proctoring/README.md'
   - 'LTI 1.3 Symfony bundle': 'symfony_bundle.md'
   - 'LTI 1.3 DevKit': 'devkit.md'

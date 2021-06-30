@@ -13,6 +13,7 @@
 ## Export a JWK from a key chain
 
 Considering you have for example on your side this key chain:
+
 - public key path: `/home/user/.ssh/id_rsa.pub`
 - private key path: `/home/user/.ssh/id_rsa`
 - private key passphrase: `test`
