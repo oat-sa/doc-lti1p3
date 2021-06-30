@@ -1,13 +1,32 @@
-# TAO LTI 1.3 PHP framework
+# [TAO](https://taotesting.com) - LTI 1.3 PHP framework
 
-> [IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for LTI 1.3 platform and / or tool implementations.
+> [![IMS certifications](assets/images/ims-cert.png){ align=right width=100px height=100px }IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for LTI 1.3 platform and / or tool implementations.
 
-## LTI 1.3 PHP libraries
+## PHP libraries
 
-You can find below a set of framework agnostic (only relying on [PHP Standard Recommendations](https://www.php-fig.org/psr/)) and open source PHP libraries available for your LTI 1.3 implementations.
+Open source and PHP frameworks agnostic (only relying on [PSR](https://www.php-fig.org/psr/)) LTI 1.3 libraries.
 
-| Library           | Status  | PR / issues | Platform                                                  |
-|----------------|-------------|----------|--------------------------------------------------------------|
-| --type         | -t          | yes      | type of LTI message launch to generate                       |
-| --parameters   | -p          | yes      | parameters (JSON encoded) for the message launch generation  |
-| --verbose      | -v          | no       | to output message launch details (default = no)              |
+| Library                                                                    | Latest version                                                                                                                                                               | Platform support                             | Tool support                                  | Documentation                                                                                  |
+|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------|
+| [:fontawesome-brands-github: Core library](https://github.com/oat-sa/lib-lti1p3-core)                  | [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-core.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-core/tags)                   | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-core/README.md)          |
+| [:fontawesome-brands-github: AGS library](https://github.com/oat-sa/lib-lti1p3-ags)                    | [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-ags.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-ags/tags)                     | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-ags/README.md)           |
+| [:fontawesome-brands-github: Basic outcome library](https://github.com/oat-sa/lib-lti1p3-basic-outcome)| [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-basic-outcome.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-basic-outcome/tags) | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-basic-outcome/README.md) |
+| [:fontawesome-brands-github: Deep linking library](https://github.com/oat-sa/lib-lti1p3-deep-linking)  | [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-deep-linking.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-deep-linking/tags)   | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-deep-linking/README.md)  |
+| [:fontawesome-brands-github: NRPS library](https://github.com/oat-sa/lib-lti1p3-nrps)                  | [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-nrps.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-nrps/tags)                   | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-nrps/README.md)          |
+| [:fontawesome-brands-github: Proctoring library](https://github.com/oat-sa/lib-lti1p3-proctoring)      | [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-proctoring.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-proctoring/tags)       | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](libraries/lib-lti1p3-proctoring/README.md)    |
+
+## Symfony bundle
+
+[:fontawesome-brands-symfony: Symfony](https://symfony.com/) bundle to automate the LTI 1.3 libraries usage in your application.
+
+| Bundle                                                                                | Latest version                                                                                                                                              | Platform support                             | Tool support                                  | Documentation                                                                        |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------|
+| [:fontawesome-brands-github: Symfony bundle](https://github.com/oat-sa/bundle-lti1p3) | [![Latest Version](https://img.shields.io/github/tag/oat-sa/bundle-lti1p3.svg?style=flat&label=release)](https://github.com/oat-sa/bundle-lti1p3/tags)      | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](bundle/README.md)  |
+
+## DevKit
+
+[IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) development kit for LTI 1.3, acting as platform and / or tool.
+
+| DevKit                                                                                | Latest version                                                                                                                                              | Platform support                             | Tool support                                  | Documentation                                                                        |
+|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------|
+| [:fontawesome-brands-github: DevKit](https://github.com/oat-sa/devkit-lti1p3)         | [![Latest Version](https://img.shields.io/github/tag/oat-sa/devkit-lti1p3.svg?style=flat&label=release)](https://github.com/oat-sa/devkit-lti1p3/tags)      | :fontawesome-solid-check-circle:{ .success } | :fontawesome-solid-check-circle:{ .success }  | [:fontawesome-solid-book-reader:  Documentation](devkit.md)  |

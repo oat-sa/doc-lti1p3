@@ -10,6 +10,9 @@ extra:
       link: https://github.com/oat-sa?q=lti1p3
       name: TAO LTI 1.3 PHP framework on Github
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   palette:
@@ -36,14 +39,15 @@ theme:
     - search.highlight
 
 markdown_extensions:
+  - attr_list
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 nav:
-  - Overview: 'index.md'
-  - IMS:
-    - 'Certifications': 'ims/certifications.md'
-    - 'Specifications': 'ims/specifications.md'
+  - 'Overview': 'index.md'
   - 'PHP libraries':
     - 'Core library':
       - 'Overview': 'libraries/lib-lti1p3-core/README.md'
@@ -88,5 +92,20 @@ nav:
         - 'LTI services':
             - 'Platform': 'libraries/lib-lti1p3-proctoring/doc/service/platform.md'
             - 'Tool': 'libraries/lib-lti1p3-proctoring/doc/service/tool.md'
-  - 'Symfony bundle': 'symfony_bundle.md'
-  - 'DevKit': 'devkit.md'
+  - 'Symfony bundle':
+      - 'Overview': 'bundle/README.md'
+      - 'Quick start':
+          - 'Configuration': 'bundle/doc/quickstart/configuration.md'
+          - 'JWKS': 'bundle/doc/quickstart/jwks.md'
+      - 'LTI messages':
+          - 'Platform': 'bundle/doc/message/platform.md'
+          - 'Tool': 'bundle/doc/message/tool.md'
+      - 'LTI services':
+          - 'Platform': 'bundle/doc/service/platform.md'
+          - 'Tool': 'bundle/doc/service/platform.md'
+  - 'DevKit':
+      - 'Overview': 'devkit/README.md'
+      - 'Installation': 'devkit/doc/installation.md'
+      - API:
+          - 'HTTP': 'devkit/doc/api.md'
+          - 'CLI': 'devkit/doc/cli.md'
