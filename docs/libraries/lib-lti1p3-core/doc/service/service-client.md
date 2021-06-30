@@ -1,17 +1,13 @@
 # LTI service client
 
-> How to use the [LtiServiceClient](../../src/Service/Client/LtiServiceClient.php) to perform authenticated LTI service calls as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Client/LtiServiceClient.php) to perform authenticated LTI service calls as a tool.
 
 ## Features
 
 You may need to perform [authenticated service calls](https://www.imsglobal.org/spec/security/v1p0#securing_web_services) from your registered tool to a platform (ex: LTI Advantage Services)
 
-To do so, you can use the [LtiServiceClient](../../src/Service/Client/LtiServiceClient.php) that permits:
+To do so, you can use the [LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Client/LtiServiceClient.php) that permits:
+
 - to call platform endpoints, returning a [PSR7 response](https://www.php-fig.org/psr/psr-7)
 - to perform automatically the required [OAuth2 authentication](https://www.imsglobal.org/spec/security/v1p0#using-json-web-tokens-with-oauth-2-0-client-credentials-grant) to get an access token
 - to handle automatically the access token caching if you provide an optional [PSR6 cache](https://www.php-fig.org/psr/psr-6/#cacheitempoolinterface) instance
@@ -41,4 +37,4 @@ $client = new LtiServiceClient($cache);
 /** @var ResponseInterface $response */
 $response = $client->request($registration, 'GET', 'https://platform.com/some-service-url', [...]);
 ```
-**Note**: the client decorates by default a [guzzle](http://docs.guzzlephp.org/en/stable/) client, but you can provide your own by implementing [LtiServiceClientInterface](../../src/Service/Client/LtiServiceClientInterface.php)
+**Note**: the client decorates by default a [guzzle](http://docs.guzzlephp.org/en/stable/) client, but you can provide your own by implementing [LtiServiceClientInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Client/LtiServiceClientInterface.php)

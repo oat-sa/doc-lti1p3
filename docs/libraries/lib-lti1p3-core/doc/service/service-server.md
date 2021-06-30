@@ -2,12 +2,6 @@
 
 > How to set up an OAuth2 authorization server endpoint to protect your platforms LTI service endpoints.
 
-## Table of contents
-
-- [Preparation of required dependencies](#preparation-of-required-dependencies)
-- [Generation of access token response for a key chain](#generation-of-access-token-response-for-a-key-chain)
-- [Service endpoint authentication](#service-endpoint-authentication)
-
 ## Preparation of required dependencies
 
 This library allow you to easily expose a OAuth2 server for a given subscription, to protect your LTI service calls as a platform.
@@ -15,17 +9,19 @@ This library allow you to easily expose a OAuth2 server for a given subscription
 You can reuse this feature in several endpoints of your application to serve several servers for distinct registrations (client id).
 
 The server feature rely on the [PHP League OAuth2 server](https://oauth2.thephpleague.com/), therefore you need to provide:
+
 - a [ClientRepositoryInterface](https://github.com/thephpleague/oauth2-server/blob/master/src/Repositories/ClientRepositoryInterface.php) implementation (to retrieve and validate your clients)
 - a [AccessTokenRepositoryInterface](https://github.com/thephpleague/oauth2-server/blob/master/src/Repositories/AccessTokenRepositoryInterface.php) implementation (to store the created access tokens)
 - a [ScopeRepositoryInterface](https://github.com/thephpleague/oauth2-server/blob/master/src/Repositories/ScopeRepositoryInterface.php) implementation (to retrieve your scopes)
 
-or you can simply use the available [library repositories](../../src/Security/OAuth2/Repository) for this.
+or you can simply use the available [library repositories](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Repository) for this.
 
 Your will also need to provide an encryption key (random string with enough entropy).
 
 ## Generation of access token response for a key chain
 
-This library provides a ready to use [AccessTokenResponseGenerator](../../src/Security/OAuth2/Generator/AccessTokenResponseGenerator.php) to generate access tokens responses for a given key chain:
+This library provides a ready to use [AccessTokenResponseGenerator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Generator/AccessTokenResponseGenerator.php) to generate access tokens responses for a given key chain:
+
 - it requires a key chain repository implementation [as explained here](../quickstart/interfaces.md) to automate signature logic against a key chain private key
 - it complies to the `client_credentials` grant type with `client_assertion` to follow [IMS security specifications](https://www.imsglobal.org/spec/security/v1p0/#using-json-web-tokens-with-oauth-2-0-client-credentials-grant)
 - it expects a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface), a [PSR7 ResponseInterface](https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface) and a key chain identifier to be easily exposed behind any PSR7 compliant controller
@@ -81,10 +77,11 @@ Once a tool has been granted with an access token, it can perform LTI service au
 
 (with header `Authorization: Bearer <token>`).
 
-To be able to protect your platform endpoints, you can use the provided [RequestAccessTokenValidator](../../src/Security/OAuth2/Validator/RequestAccessTokenValidator.php):
+To be able to protect your platform endpoints, you can use the provided [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php):
+
 - it requires a registration repository implementation [as explained here](../quickstart/interfaces.md) to automate the token signature checks
 - it expects a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface) to validate
-- it will output a [RequestAccessTokenValidationResult](../../src/Security/OAuth2/Validator/Result/RequestAccessTokenValidationResult.php) representing the token validation, the related registration, the token itself and associated scopes.
+- it will output a [RequestAccessTokenValidationResult](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/Result/RequestAccessTokenValidationResult.php) representing the token validation, the related registration, the token itself and associated scopes.
 
 For example,
 

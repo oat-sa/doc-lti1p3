@@ -1,23 +1,19 @@
 # ACS Tool - Assessment Control Service client
 
-> How to use the [AcsServiceClient](../../src/Service/Client/AcsServiceClient.php) to perform authenticated ACS service calls as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [AcsServiceClient](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Client/AcsServiceClient.php) to perform authenticated ACS service calls as a tool.
 
 ## Features
 
-This library provides a [AcsServiceClient](../../src/Service/Client/AcsServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow sending ACS controls to a platform.
+This library provides a [AcsServiceClient](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Client/AcsServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow sending ACS controls to a platform.
 
 You can use:
+
 - `sendControlForPayload()` to [send ACS control](https://www.imsglobal.org/spec/proctoring/v1p0#h.awao2i3cnvsy) from a received LTI message payload
 - `sendControl()` to [send ACS control](https://www.imsglobal.org/spec/proctoring/v1p0#h.awao2i3cnvsy) for a given ACS service url
 
 ## Usage
 
-To send an ACS control:
+### Send an ACS control
 
 ```php
 <?php

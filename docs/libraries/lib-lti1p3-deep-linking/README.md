@@ -9,13 +9,6 @@
 
 > PHP library for [LTI 1.3 Deep Linking](https://www.imsglobal.org/spec/lti-dl/v2p0/) implementations as platforms and / or as tools, based on [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core).
 
-# Table of contents
-
-- [Specifications](#specifications)
-- [Installation](#installation)
-- [Tutorials](#tutorials)
-- [Tests](#tests)
-
 ## Specifications
 
 - [IMS LTI 1.3 Deep Linking](https://www.imsglobal.org/spec/lti-dl/v2p0/)
@@ -34,7 +27,7 @@ You can then find below usage tutorials, presented by topics.
 
 ### Configuration
 
-- how to [configure the underlying LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core#quick-start)
+- how to [configure the underlying LTI 1.3 Core library](../lib-lti1p3-core/doc/quickstart/configuration.md)
 
 ### Workflow
 
@@ -47,4 +40,4 @@ To run tests:
 ```console
 $ vendor/bin/phpunit
 ```
-**Note**: see [phpunit.xml.dist](phpunit.xml.dist) for available test suites.
+**Note**: see [phpunit.xml.dist](https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/phpunit.xml.dist) for available test suites.

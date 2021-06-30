@@ -4,12 +4,6 @@
 
 **Note**: The algorithm `RS256` is used by default.
 
-## Table of contents
-
-- [Export a JWK from a key chain](#export-a-jwk-from-a-key-chain)
-- [Export a JWKS from multiple key chains](#export-a-jwks-from-multiple-key-chains)
-- [Provide a JWKS response](#provide-a-jwks-response)
-
 ## Export a JWK from a key chain
 
 Considering you have for example on your side this key chain:
@@ -18,7 +12,7 @@ Considering you have for example on your side this key chain:
 - private key path: `/home/user/.ssh/id_rsa`
 - private key passphrase: `test`
 
-To extract the JWK (JSON Web Key) properties, you can use the [JwkRS256Exporter](../../src/Security/Jwks/Exporter/Jwk/JwkRS256Exporter.php) as following:
+To extract the JWK (JSON Web Key) properties, you can use the [JwkRS256Exporter](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Jwks/Exporter/Jwk/JwkRS256Exporter.php) as following:
 
 ```php
 <?php
@@ -51,7 +45,7 @@ $jwkExport = (new JwkRS256Exporter())->export($keyChain);
         "kid": "1"
     }
     ```
-- If you want to support other algorithms than RS256, you can implement the [JwkExporterInterface](../../src/Security/Jwks/Exporter/Jwk/JwkExporterInterface.php).
+- If you want to support other algorithms than RS256, you can implement the [JwkExporterInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Jwks/Exporter/Jwk/JwkExporterInterface.php).
 
 ## Export a JWKS from multiple key chains
 
@@ -67,7 +61,7 @@ Chain 2:
 - private key path: `/home/user/.ssh/chain2/id_rsa`
 - private key passphrase: `test2`
 
-You can then use the [KeyChainRepository](../../src/Security/Key/KeyChainRepository.php):
+You can then use the [KeyChainRepository](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyChainRepository.php):
 
 ```php
 <?php
@@ -102,9 +96,9 @@ $keyChainRepository
 $keySet = $keyChainRepository->findByKeySetName('myKeySetName'); //  = [$keyChain1, $keyChain2]
 ```
 
-**Note**: you can also provide your own [KeyChainRepositoryInterface](../../src/Security/Key/KeyChainRepositoryInterface.php) implementation, to store keys in database by example.
+**Note**: you can also provide your own [KeyChainRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyChainRepositoryInterface.php) implementation, to store keys in database by example.
 
-To extract the JWKS (JSON Web Key Set) properties for you key set name `myKeySetName`, you can use the [JwksExporter](../../src/Security/Jwks/Exporter/JwksExporter.php) as following:
+To extract the JWKS (JSON Web Key Set) properties for you key set name `myKeySetName`, you can use the [JwksExporter](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Jwks/Exporter/JwksExporter.php) as following:
 
 ```php
 <?php
@@ -141,7 +135,7 @@ Now the `$jwksExport` array contains the needed [JWKS properties](https://auth0.
 
 ## Provide a JWKS response
 
-You can expose the [JwksRequestHandler](../../src/Security/Jwks/Server/JwksRequestHandler.php) in an application controller to provide a ready to use JWKS [PSR7 response](https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface) for a given key set name:
+You can expose the [JwksRequestHandler](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Jwks/Server/JwksRequestHandler.php) in an application controller to provide a ready to use JWKS [PSR7 response](https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface) for a given key set name:
 
 ```php
 <?php

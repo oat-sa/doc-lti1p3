@@ -1,4 +1,4 @@
-# LTI 1.3 PHP framework
+# TAO LTI 1.3 PHP framework
 
 > [IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for LTI 1.3 platform and / or tool implementations.
 

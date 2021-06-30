@@ -1,4 +1,4 @@
-# Library configuration
+# Core library configuration
 
 > How to provide configuration step by step, to be able to use the library as a tool, or a platform, or both.
 
@@ -12,7 +12,7 @@ Considering you have for example on your side this key chain:
 - private key path: `/home/user/.ssh/id_rsa`
 - private key passphrase: `test`
 
-You can then use the provided [KeyChainFactory](../../src/Security/Key/KeyChainFactory.php) to build your security keys:
+You can then use the provided [KeyChainFactory](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyChainFactory.php) to build your security keys:
 
 ```php
 <?php
@@ -29,13 +29,14 @@ $keyChain = (new KeyChainFactory)->create(
      KeyInterface::ALG_RS256            // [optional] algorithm (default: RS256)
 );
 ```
+
 **Notes**:
 
 - given example deals with local key files, automatically done when prefixed by `file://`
 - you can provide the public / private key stream content or [JWK array values](https://auth0.com/docs/tokens/json-web-tokens/json-web-key-set-properties) by passing them as a constructor argument instead (if you want to fetch your keys from a bucket file or a JWKS endpoint for example)
-- by default the `RS256` will be used, but you can provide others listed [here](../../src/Security/Key/KeyInterface.php)
+- by default the `RS256` will be used, but you can provide others listed [here](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyInterface.php)
 
-As a result, you'll get a [KeyChainInterface](../../src/Security/Key/KeyChainInterface.php) instance:
+As a result, you'll get a [KeyChainInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyChainInterface.php) instance:
 
 ```php
 <?php
@@ -70,7 +71,7 @@ $platform = new Platform(
     'https://platform.com/oauth2-access-token'  // [optional] OAuth2 access token url
 );
 ```
-**Note**: you can also provide your own implementation of the [PlatformInterface](../../src/Platform/PlatformInterface.php).
+**Note**: you can also provide your own implementation of the [PlatformInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Platform/PlatformInterface.php).
 
 ## Configure a tool
 
@@ -94,7 +95,7 @@ $tool = new Tool(
     'https://tool.com/deep-linking' // [optional] DeepLinking url
 );
 ```
-**Note**: you can also provide your own implementation of the [ToolInterface](../../src/Tool/ToolInterface.php).
+**Note**: you can also provide your own implementation of the [ToolInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Tool/ToolInterface.php).
 
 ## Configure a registration
 
@@ -122,9 +123,9 @@ $registration = new Registration(
 ```
 **Notes**:
 
-- you can also provide your own implementation of the [RegistrationInterface](../../src/Registration/RegistrationInterface.php)
+- you can also provide your own implementation of the [RegistrationInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Registration/RegistrationInterface.php)
 - depending on the side you act (platform or tool), you need to configure what is relevant regarding the keys and the JWKS urls
-- since you should be in control of the way you retrieve your registrations configuration (from YML files, array, database, etc), you have to provide your own implementation of the [RegistrationRepositoryInterface](../../src/Registration/RegistrationRepositoryInterface.php) to fit your needs
+- since you should be in control of the way you retrieve your registrations configuration (from YML files, array, database, etc), you have to provide your own implementation of the [RegistrationRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Registration/RegistrationRepositoryInterface.php) to fit your needs
 
 ## Public key versus JWKS
 
@@ -139,7 +140,7 @@ To be optimal for signature verification:
 Using JWKS is recommended (but not mandatory):
 
 - it avoids keys exchange / maintenance processes, and allow easier integrations (keys can rotate, JWKS url remains the same)
-- it handles automatically caching (to avoid useless traffic), see possibility to inject a [PSR6 cache](https://www.php-fig.org/psr/psr-6/#cacheitempoolinterface) into the [JwksFetcher](../../src/Security/Jwks/Fetcher/JwksFetcher.php)
+- it handles automatically caching (to avoid useless traffic), see possibility to inject a [PSR6 cache](https://www.php-fig.org/psr/psr-6/#cacheitempoolinterface) into the [JwksFetcher](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Jwks/Fetcher/JwksFetcher.php)
 
 Depending on the side you're acting on, you need to provide a `KeyChainInterface` instance that contains a public key and it's associated private key (and passphrase).
 

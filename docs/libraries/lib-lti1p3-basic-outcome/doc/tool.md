@@ -1,20 +1,17 @@
 # Basic Outcome Tool - Basic Outcome Service Client
 
-> How to use the [BasicOutcomeServiceClient](../src/Service/Client/BasicOutcomeServiceClient.php) to perform authenticated basic outcome service calls as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [BasicOutcomeServiceClient](https://github.com/oat-sa/lib-lti1p3-basic-outcome/blob/master/src//Service/Client/BasicOutcomeServiceClient.php) to perform authenticated basic outcome service calls as a tool.
 
 ## Features
 
-This library provides a [BasicOutcomeServiceClient](../src/Service/Client/BasicOutcomeServiceClient.php) (based on the [LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow the following outcome operations:
+This library provides a [BasicOutcomeServiceClient](https://github.com/oat-sa/lib-lti1p3-basic-outcome/blob/master/src//Service/Client/BasicOutcomeServiceClient.php) (based on the [LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow the following outcome operations:
+
 - [read result](https://www.imsglobal.org/spec/lti-bo/v1p1#readresult)
 - [replace result](https://www.imsglobal.org/spec/lti-bo/v1p1#replaceresult)
 - [delete result](https://www.imsglobal.org/spec/lti-bo/v1p1#deleteresult)
 
 You can use:
+
 - `readResultForPayload()` to [read a result](https://www.imsglobal.org/spec/lti-bo/v1p1#readresult) for a received LTI message payload
 - `readResult()` to [read a result](https://www.imsglobal.org/spec/lti-bo/v1p1#readresult) from a given basic outcome url and result sourced id
 - `replaceResultForPayload()` to [replace a result](https://www.imsglobal.org/spec/lti-bo/v1p1#replaceresult) for a received LTI message payload, with given score and language
@@ -24,7 +21,7 @@ You can use:
 
 ## Usage
 
-To read a result:
+### Read a result
 
 ```php
 <?php
@@ -72,7 +69,7 @@ if ($response->isSuccess()) {
 }
 ```
 
-To replace a result:
+### Replace a result
 
 ```php
 <?php
@@ -118,7 +115,7 @@ if ($response->isSuccess()) {
 }
 ```
 
-To delete a result:
+### Delete a result
 
 ```php
 <?php

@@ -1,15 +1,10 @@
 # ACS Platform - Assessment Control Service server
 
-> How to use the [AcsServiceServerRequestHandler](../../src/Service/Server/Handler/AcsServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to serve authenticated ACS service calls as a platform.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [AcsServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Server/Handler/AcsServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to serve authenticated ACS service calls as a platform.
 
 ## Features
 
-This library provides a [AcsServiceServerRequestHandler](../../src/Service/Server/Handler/AcsServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle assessment control requests.
+This library provides a [AcsServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Server/Handler/AcsServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle assessment control requests.
 
 - it accepts a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface),
 - leverages the [required IMS LTI 1.3 service authentication](https://www.imsglobal.org/spec/security/v1p0/#securing_web_services),
@@ -17,7 +12,7 @@ This library provides a [AcsServiceServerRequestHandler](../../src/Service/Serve
 
 ## Usage
 
-First, you need to provide a [AcsServiceServerControlProcessorInterface](../../src/Service/Server/Processor/AcsServiceServerControlProcessorInterface.php) implementation, in charge to process the ACS control requests.
+First, you need to provide a [AcsServiceServerControlProcessorInterface](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Server/Processor/AcsServiceServerControlProcessorInterface.php) implementation, in charge to process the ACS control requests.
 
 ```php
 <?php
@@ -40,7 +35,8 @@ $processor = new class() implements AcsServiceServerControlProcessorInterface
 ```
 
 Then:
-- you can construct the [AcsServiceServerRequestHandler](../../src/Service/Server/Handler/AcsServiceServerRequestHandler.php) (constructed with your [AcsServiceServerControlProcessorInterface](../../src/Service/Server/Processor/AcsServiceServerControlProcessorInterface.php) implementation)
+
+- you can construct the [AcsServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Server/Handler/AcsServiceServerRequestHandler.php) (constructed with your [AcsServiceServerControlProcessorInterface](https://github.com/oat-sa/lib-lti1p3-proctoring/blob/master/src//Service/Server/Processor/AcsServiceServerControlProcessorInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php

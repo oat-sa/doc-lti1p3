@@ -1,17 +1,13 @@
 # NRPS Tool - Membership service client
 
-> How to use the [MembershipServiceClient](../src/Service/Client/MembershipServiceClient.php) to perform authenticated NRPS service calls as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [MembershipServiceClient](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Client/MembershipServiceClient.php) to perform authenticated NRPS service calls as a tool.
 
 ## Features
 
-This library provides a [MembershipServiceClient](../src/Service/Client/MembershipServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow retrieving NRPS memberships exposed by a platform.
+This library provides a [MembershipServiceClient](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Client/MembershipServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow retrieving NRPS memberships exposed by a platform.
 
 You can use:
+
 - `getContextMembershipFromPayload()` to get [context membership](https://www.imsglobal.org/spec/lti-nrps/v2p0#context-membership) from a received LTI message payload
 - `getContextMembership()` to get [context membership](https://www.imsglobal.org/spec/lti-nrps/v2p0#context-membership) for a given membership service url
 - `getResourceLinkMembershipFromPayload()` to get [resource link membership](https://www.imsglobal.org/spec/lti-nrps/v2p0#resource-link-membership-service) from a received LTI message payload
@@ -19,7 +15,7 @@ You can use:
 
 ## Usage
 
-To get a context membership:
+### Get a context membership
 ```php
 <?php
 
@@ -75,7 +71,7 @@ if ($membership->hasDifferences()) {
 }
 ```
 
-To get a resource link membership:
+### Get a resource link membership
 ```php
 <?php
 

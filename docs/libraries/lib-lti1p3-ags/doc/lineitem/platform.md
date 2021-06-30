@@ -1,20 +1,10 @@
 # AGS Platform - Line Item service server
 
-> How to use the [line item service server handlers](../../src/Service/LineItem/Server/Handler) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to provide authenticated AGS endpoints for line item management as a platform.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
-    - [Get line item service endpoint](#get-line-item-service-endpoint)
-    - [List line item service endpoint](#list-line-items-service-endpoint)
-    - [Create line item service endpoint](#create-line-item-service-endpoint)
-    - [Update line item service endpoint](#update-line-item-service-endpoint)
-    - [Delete line item service endpoint](#delete-line-item-service-endpoint)
+> How to use the [line item service server handlers](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to provide authenticated AGS endpoints for line item management as a platform.
 
 ## Features
 
-This library provides a set of [line item service server handlers](../../src/Service/LineItem/Server/Handler) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle line item management requests.
+This library provides a set of [line item service server handlers](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle line item management requests.
 
 - they accept a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface),
 - leverages the [required IMS LTI 1.3 service authentication](https://www.imsglobal.org/spec/security/v1p0/#securing_web_services),
@@ -28,11 +18,12 @@ You can find below how to use each AGS service server request handlers to provid
 
 ### Get line item service endpoint
 
-First, you need to provide a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md). 
+First, you need to provide a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md). 
 
 
 Then:
-- you can construct the [GetLineItemServiceServerRequestHandler](../../src/Service/LineItem/Server/Handler/GetLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation)
+
+- you can construct the [GetLineItemServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler/GetLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php
@@ -66,11 +57,12 @@ $response = $server->handle($request);
 
 ### List line items service endpoint
 
-First, you need to provide a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
+First, you need to provide a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
 
 
 Then:
-- you can construct the [ListLineItemsServiceServerRequestHandler](../../src/Service/LineItem/Server/Handler/ListLineItemsServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation)
+
+- you can construct the [ListLineItemsServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler/ListLineItemsServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php
@@ -104,11 +96,11 @@ $response = $server->handle($request);
 
 ### Create line item service endpoint
 
-First, you need to provide a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
-
+First, you need to provide a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
 
 Then:
-- you can construct the [CreateLineItemServiceServerRequestHandler](../../src/Service/LineItem/Server/Handler/CreateLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation)
+
+- you can construct the [CreateLineItemServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler/CreateLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php
@@ -142,11 +134,11 @@ $response = $server->handle($request);
 
 ### Update line item service endpoint
 
-First, you need to provide a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
-
+First, you need to provide a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
 
 Then:
-- you can construct the [UpdateLineItemServiceServerRequestHandler](../../src/Service/LineItem/Server/Handler/UpdateLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation)
+
+- you can construct the [UpdateLineItemServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler/UpdateLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php
@@ -180,11 +172,11 @@ $response = $server->handle($request);
 
 ### Delete line item service endpoint
 
-First, you need to provide a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
-
+First, you need to provide a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md).
 
 Then:
-- you can construct the [DeleteLineItemServiceServerRequestHandler](../../src/Service/LineItem/Server/Handler/DeleteLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation)
+
+- you can construct the [DeleteLineItemServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler/DeleteLineItemServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php

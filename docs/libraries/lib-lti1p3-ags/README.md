@@ -7,15 +7,7 @@
 [![Psalm Level Status](https://shepherd.dev/github/oat-sa/lib-lti1p3-ags/level.svg)](https://shepherd.dev/github/oat-sa/lib-lti1p3-ags)
 [![Packagist Downloads](http://img.shields.io/packagist/dt/oat-sa/lib-lti1p3-ags.svg)](https://packagist.org/packages/oat-sa/lib-lti1p3-ags)
 
-
 > PHP library for [LTI 1.3 Assignment and Grade Services](https://www.imsglobal.org/spec/lti-ags/v2p0) implementations as platforms and / or as tools, based on [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core).
-
-# Table of contents
-
-- [Specifications](#specifications)
-- [Installation](#installation)
-- [Tutorials](#tutorials)
-- [Tests](#tests)
 
 ## Specifications
 
@@ -34,7 +26,7 @@ You can then find below usage tutorials, presented by topics.
 
 ### Quick start
 
-- how to [configure the underlying LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core#quick-start)
+- how to [configure the underlying LTI 1.3 Core library](../lib-lti1p3-core/doc/quickstart/configuration.md)
 - how to [implement the AGS library interfaces](doc/quickstart/interfaces.md)
 - how to [check AGS scopes permissions](doc/quickstart/voter.md)
 
@@ -60,4 +52,4 @@ To run tests:
 ```console
 $ vendor/bin/phpunit
 ```
-**Note**: see [phpunit.xml.dist](phpunit.xml.dist) for available test suites.
+**Note**: see [phpunit.xml.dist](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/phpunit.xml.dist) for available test suites.

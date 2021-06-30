@@ -10,13 +10,6 @@ You can find below a Deep Linking workflow diagram, with steps numbers:
 
 Each step will be detailed below, from both platform and tool perspectives.
 
-## Table of contents
-
-- [1 - Platform side: deep linking request generation](#1---platform-side-deep-linking-request-generation)
-- [2 - Tool side: deep linking request handling](#2---tool-side-deep-linking-request-handling)
-- [3 - Tool side: deep linking response generation](#3---tool-side-deep-linking-response-generation)
-- [4 - Platform side: deep linking response handling](#4---platform-side-deep-linking-response-handling)
-
 ## 1 - Platform side: deep linking request generation
 
 You can find below required steps to generate a deep linking request message, needed only if you're acting as a platform.
@@ -27,7 +20,7 @@ As a platform, you can create a [deep linking request message](https://www.imsgl
 
 Platforms can drive the tool behaviour on deep linking interactions by providing [deep linking settings](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-settings).
 
-You have to first provide a [DeepLinkingSettingsInterface](../src/Settings/DeepLinkingSettingsInterface.php) implementation to configure your settings:
+You have to first provide a [DeepLinkingSettingsInterface](https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Settings/DeepLinkingSettingsInterface.php) implementation to configure your settings:
 
 ```php
 <?php
@@ -55,7 +48,8 @@ $deepLinkingSettings = new DeepLinkingSettings(
 );
 ```
 
-Then, you can use the [DeepLinkingLaunchRequestBuilder](../src/Message/Launch/Builder/DeepLinkingLaunchRequestBuilder.php) to create the message:
+Then, you can use the [DeepLinkingLaunchRequestBuilder](https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/Launch/Builder/DeepLinkingLaunchRequestBuilder.php) to create the message:
+
 ```php
 <?php
 
@@ -83,7 +77,7 @@ $message = $builder->buildDeepLinkingLaunchRequest(
 
 ### Launch the message
 
-As a result of the build, you get a [LtiMessageInterface](../../src/Message/LtiMessageInterface.php) instance that has to be used in the following ways:
+As a result of the build, you get a [LtiMessageInterface](../https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/LtiMessageInterface.php) instance that has to be used in the following ways:
 
 ```php
 <?php
@@ -207,7 +201,7 @@ $resourceCollection
 
 ### Create the message
 
-Once the resource collection ready, you can return it to the platform in a [deep linking response message](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message), by using the [DeepLinkingLaunchResponseBuilder](../src/Message/Launch/Builder/DeepLinkingLaunchResponseBuilder.php):
+Once the resource collection ready, you can return it to the platform in a [deep linking response message](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message), by using the [DeepLinkingLaunchResponseBuilder](https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/Launch/Builder/DeepLinkingLaunchResponseBuilder.php):
 
 ```php
 <?php
@@ -242,7 +236,7 @@ $message = $builder->buildDeepLinkingLaunchResponse(
 
 ### Launch the message
 
-As a result of the build, you get a [LtiMessageInterface](../../src/Message/LtiMessageInterface.php) instance that [has to be sent as a form POST](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message):
+As a result of the build, you get a [LtiMessageInterface](../https://github.com/oat-sa/lib-lti1p3-deep-linking/blob/master/src//Message/LtiMessageInterface.php) instance that [has to be sent as a form POST](https://www.imsglobal.org/spec/lti-dl/v2p0/#deep-linking-response-message):
 
 ```php
 <?php

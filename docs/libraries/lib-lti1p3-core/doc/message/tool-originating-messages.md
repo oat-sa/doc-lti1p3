@@ -8,11 +8,6 @@
 
 Each step will be detailed below, from both tool and platform perspectives.
 
-## Table of contents
-
-- [1 - Tool side: launch generation](#1---tool-side-launch-generation)
-- [2 - Platform side: launch validation](#2---platform-side-launch-validation)
-
 ## 1 - Tool side: launch generation
 
 You can find below required steps to generate a tool originating message, needed only if you're acting as a tool.
@@ -21,7 +16,7 @@ You can find below required steps to generate a tool originating message, needed
 
 As a tool, you can create a tool originating message for a platform within the context of a registration.
 
-To do so, you can use the [ToolOriginatingLaunchBuilder](../../src/Message/Launch/Builder/ToolOriginatingLaunchBuilder.php):
+To do so, you can use the [ToolOriginatingLaunchBuilder](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Launch/Builder/ToolOriginatingLaunchBuilder.php):
 ```php
 <?php
 
@@ -49,11 +44,11 @@ $message = $builder->buildToolOriginatingLaunch(
     ]
 );
 ```
-**Note**: like the `DeepLinkingContentItemsClaim` class, any claim that implement the [MessagePayloadClaimInterface](../../src/Message/Payload/Claim/MessagePayloadClaimInterface.php) will be automatically normalized and added to the message payload claims.
+**Note**: like the `DeepLinkingContentItemsClaim` class, any claim that implement the [MessagePayloadClaimInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/MessagePayloadClaimInterface.php) will be automatically normalized and added to the message payload claims.
 
 ### Launch the message
 
-As a result of the build, you get a [LtiMessageInterface](../../src/Message/LtiMessageInterface.php) instance that has to be used this way (form POST into `JWT` parameter):
+As a result of the build, you get a [LtiMessageInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php) instance that has to be used this way (form POST into `JWT` parameter):
 
 ```php
 <?php
@@ -73,10 +68,11 @@ You can find below required steps to validate a tool originating message launch,
 
 As a platform, you'll receive an HTTP request containing the launch message.
 
-The [PlatformLaunchValidator](../../src/Message/Launch/Validator/Platform/PlatformLaunchValidator.php) can be used for this:
+The [PlatformLaunchValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Launch/Validator/Platform/PlatformLaunchValidator.php) can be used for this:
+
 - it requires a registration repository and a nonce repository implementations [as explained here](../quickstart/interfaces.md)
 - it expects a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface) to validate
-- it will output a [LaunchValidationResultInterface](../../src/Message/Launch/Validator/Result/LaunchValidationResultInterface.php) representing the launch validation, the related registration and the message payload itself.
+- it will output a [LaunchValidationResultInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Launch/Validator/Result/LaunchValidationResultInterface.php) representing the launch validation, the related registration and the message payload itself.
 
 For example:
 ```php

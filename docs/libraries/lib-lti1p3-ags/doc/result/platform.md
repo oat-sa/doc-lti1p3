@@ -1,15 +1,10 @@
 # AGS Platform - Result service server
 
-> How to use the [ResultServiceServerRequestHandler](../../src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to provide authenticated AGS endpoint for results retrieval as a platform.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [ResultServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to provide authenticated AGS endpoint for results retrieval as a platform.
 
 ## Features
 
-This library provides a [ResultServiceServerRequestHandler](../../src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to expose results to tools, as a platform.
+This library provides a [ResultServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to expose results to tools, as a platform.
 
 - it accepts a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface),
 - leverages the [required IMS LTI 1.3 service authentication](https://www.imsglobal.org/spec/security/v1p0/#securing_web_services),
@@ -20,11 +15,13 @@ It allows you to provide a result service endpoint as specified in [AGS openapi 
 ## Usage
 
 First, you need to provide:
-- a [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md)
-- a [ResultRepositoryInterface](../../src/Repository/ResultRepositoryInterface.php) implementation, in charge to handle results, as explained [in the interfaces library documentation](../quickstart/interfaces.md)
+
+- a [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) implementation, in charge to handle line items, as explained [in the interfaces library documentation](../quickstart/interfaces.md)
+- a [ResultRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/ResultRepositoryInterface.php) implementation, in charge to handle results, as explained [in the interfaces library documentation](../quickstart/interfaces.md)
 
 Then:
-- you can construct the [ResultServiceServerRequestHandler](../../src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php) and [ResultRepositoryInterface](../../src/Repository/ResultRepositoryInterface.php) implementations)
+
+- you can construct the [ResultServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Server/Handler/ResultServiceServerRequestHandler.php) (constructed with your [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php) and [ResultRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/ResultRepositoryInterface.php) implementations)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php

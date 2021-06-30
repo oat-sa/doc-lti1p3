@@ -9,13 +9,6 @@
 
 > PHP library for [LTI 1.3 Basic Outcome](https://www.imsglobal.org/spec/lti-bo/v1p1) implementations as platforms and / or as tools, based on [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core).
 
-# Table of contents
-
-- [Specifications](#specifications)
-- [Installation](#installation)
-- [Tutorials](#tutorials)
-- [Tests](#tests)
-
 ## Specifications
 
 - [IMS LTI 1.3 Basic Outcome Service](https://www.imsglobal.org/spec/lti-bo/v1p1)
@@ -34,15 +27,15 @@ You can then find below usage tutorials, presented by topics.
 
 ### Configuration
 
-- how to [configure the underlying LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core#quick-start)
-
-### Tool
-
-- how to [use the Basic Outcome library as a tool](doc/tool.md)
+- how to [configure the underlying LTI 1.3 Core library](../lib-lti1p3-core/doc/quickstart/configuration.md)
 
 ### Platform
 
 - how to [use the Basic Outcome library as a platform](doc/platform.md)
+
+### Tool
+
+- how to [use the Basic Outcome library as a tool](doc/tool.md)
 
 ## Tests
 
@@ -51,4 +44,4 @@ To run tests:
 ```console
 $ vendor/bin/phpunit
 ```
-**Note**: see [phpunit.xml.dist](phpunit.xml.dist) for available test suites.
+**Note**: see [phpunit.xml.dist](https://github.com/oat-sa/lib-lti1p3-basic-outcome/blob/master/phpunit.xml.dist) for available test suites.

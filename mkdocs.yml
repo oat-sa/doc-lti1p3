@@ -1,36 +1,92 @@
-site_name: LTI 1.3 PHP framework
+site_name: TAO -  LTI 1.3 PHP framework
 site_url: https://oat-sa.github.io/doc-lti1p3/
 
-repo_url: https://github.com/oat-sa?q=lti1p
+copyright: <a target="_blank" href="https://taotesting.com">Open Assessment Technologies S.A.</a>
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/oat-sa?q=lti1p3
+      name: TAO LTI 1.3 PHP framework on Github
 
 theme:
   name: material
   palette:
-    scheme: slate
-    logo: 'assets/images/logo.png'
-    favicon: 'assets/images/favicon.png'
-    features:
-      - navigation.instant
-      - navigation.tracking
-      - navigation.sections
-      - navigation.expand
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: 'assets/images/logo.png'
+  favicon: 'assets/images/favicon.png'
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.highlight
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 nav:
   - Overview: 'index.md'
   - IMS:
     - 'Certifications': 'ims/certifications.md'
     - 'Specifications': 'ims/specifications.md'
-  - 'LTI 1.3 PHP libraries':
+  - 'PHP libraries':
     - 'Core library':
       - 'Overview': 'libraries/lib-lti1p3-core/README.md'
       - 'Quick start':
         - 'Configuration': 'libraries/lib-lti1p3-core/doc/quickstart/configuration.md'
         - 'Interfaces': 'libraries/lib-lti1p3-core/doc/quickstart/interfaces.md'
         - 'JWKS': 'libraries/lib-lti1p3-core/doc/quickstart/jwks.md'
-    - 'AGS library': 'libraries/lib-lti1p3-ags/README.md'
-    - 'Basic outcome library': 'libraries/lib-lti1p3-basic-outcome/README.md'
-    - 'Deep linking library': 'libraries/lib-lti1p3-deep-linking/README.md'
-    - 'NRPS library': 'libraries/lib-lti1p3-nrps/README.md'
-    - 'Proctoring library': 'libraries/lib-lti1p3-proctoring/README.md'
-  - 'LTI 1.3 Symfony bundle': 'symfony_bundle.md'
-  - 'LTI 1.3 DevKit': 'devkit.md'
+      - 'LTI messages':
+          - 'Platform originating messages': 'libraries/lib-lti1p3-core/doc/message/platform-originating-messages.md'
+          - 'Tool originating messages': 'libraries/lib-lti1p3-core/doc/message/tool-originating-messages.md'
+      - 'LTI services':
+          - 'LTI service server': 'libraries/lib-lti1p3-core/doc/service/service-server.md'
+          - 'LTI service client': 'libraries/lib-lti1p3-core/doc/service/service-client.md'
+    - 'AGS library':
+        - 'Overview': 'libraries/lib-lti1p3-ags/README.md'
+        - 'Quick start':
+            - 'Interfaces': 'libraries/lib-lti1p3-ags/doc/quickstart/interfaces.md'
+            - 'Scopes permissions': 'libraries/lib-lti1p3-ags/doc/quickstart/voter.md'
+        - 'Line items':
+            - 'Platform': 'libraries/lib-lti1p3-ags/doc/lineitem/platform.md'
+            - 'Tool': 'libraries/lib-lti1p3-ags/doc/lineitem/tool.md'
+        - 'Scores':
+            - 'Platform': 'libraries/lib-lti1p3-ags/doc/score/platform.md'
+            - 'Tool': 'libraries/lib-lti1p3-ags/doc/score/tool.md'
+        - 'Results':
+            - 'Platform': 'libraries/lib-lti1p3-ags/doc/result/platform.md'
+            - 'Tool': 'libraries/lib-lti1p3-ags/doc/result/tool.md'
+    - 'Basic outcome library':
+        - 'Overview': 'libraries/lib-lti1p3-basic-outcome/README.md'
+        - 'Platform': 'libraries/lib-lti1p3-basic-outcome/doc/platform.md'
+        - 'Tool': 'libraries/lib-lti1p3-basic-outcome/doc/tool.md'
+    - 'Deep linking library':
+        - 'Overview': 'libraries/lib-lti1p3-deep-linking/README.md'
+        - 'Workflow': 'libraries/lib-lti1p3-deep-linking/doc/deep-linking-workflow.md'
+    - 'NRPS library':
+        - 'Overview': 'libraries/lib-lti1p3-nrps/README.md'
+        - 'Platform': 'libraries/lib-lti1p3-nrps/doc/platform.md'
+        - 'Tool': 'libraries/lib-lti1p3-nrps/doc/tool.md'
+    - 'Proctoring library':
+        - 'Overview': 'libraries/lib-lti1p3-proctoring/README.md'
+        - 'LTI messages': 'libraries/lib-lti1p3-proctoring/doc/message/proctoring-workflow.md'
+        - 'LTI services':
+            - 'Platform': 'libraries/lib-lti1p3-proctoring/doc/service/platform.md'
+            - 'Tool': 'libraries/lib-lti1p3-proctoring/doc/service/tool.md'
+  - 'Symfony bundle': 'symfony_bundle.md'
+  - 'DevKit': 'devkit.md'

@@ -9,15 +9,6 @@
 
 > PHP library for [LTI 1.3 Core](http://www.imsglobal.org/spec/lti/v1p3) implementations as platforms and / or as tools.
 
-## Table of contents
-
-- [Specifications](#specifications)
-- [Installation](#installation)
-- [Concepts](#concepts)
-- [Tutorials](#tutorials)
-- [Wiki](#wiki)
-- [Tests](#tests)
-
 ## Specifications
 
 - [IMS LTI 1.3 Core](http://www.imsglobal.org/spec/lti/v1p3)
@@ -35,25 +26,25 @@ You can find below the implementations of the main concepts of the [LTI 1.3 Core
 
 ###  Platforms, tools and registrations
 
-- [Platform](src/Platform/PlatformInterface.php): any kind of platform that needs to delegate bits of functionality out to a suite of tools.
-- [Tool](src/Tool/ToolInterface.php): external application or service providing functionality to a platform.
-- [Registration](src/Registration/RegistrationInterface.php): defines the scope of contexts under which a tool is made available for a platform.
+- [Platform](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Platform/PlatformInterface.php): any kind of platform that needs to delegate bits of functionality out to a suite of tools.
+- [Tool](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Tool/ToolInterface.php): external application or service providing functionality to a platform.
+- [Registration](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Registration/RegistrationInterface.php): defines the scope of contexts under which a tool is made available for a platform.
 
 ### Messages
 
 Messages represent integration between platforms and tools intermediated by a user's browser.
 
-- [LTI Message](src/Message/LtiMessageInterface.php): reference to an exchange between platforms and tools in message based communications.
-- [LTI Message Payload](src/Message/Payload/LtiMessagePayloadInterface.php): reference to the payload (JWT) of an exchange between platforms and tools in message based communications, containing LTI claims.
-- [LTI Resource Link](src/Resource/LtiResourceLink/LtiResourceLinkInterface.php): reference to a resource made available from a tool for a platform.
-- [LTI Resource Link Launch](src/Message/Launch/Builder/LtiResourceLinkLaunchRequestBuilder.php): refers to the process in which a user interacts with an LTI Resource Link within the platform and is subsequently "launched" into a tool.
+- [LTI Message](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php): reference to an exchange between platforms and tools in message based communications.
+- [LTI Message Payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php): reference to the payload (JWT) of an exchange between platforms and tools in message based communications, containing LTI claims.
+- [LTI Resource Link](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Resource/LtiResourceLink/LtiResourceLinkInterface.php): reference to a resource made available from a tool for a platform.
+- [LTI Resource Link Launch](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Launch/Builder/LtiResourceLinkLaunchRequestBuilder.php): refers to the process in which a user interacts with an LTI Resource Link within the platform and is subsequently "launched" into a tool.
 
 ### Services
 
 Services represent direct connections between platforms and tools (without involving user's browser).
 
-- [Server](src/Service/Server): server side of LTI service
-- [Client](src/Service/Client): client side of LTI service
+- [Server](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server): server side of LTI service
+- [Client](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Client): client side of LTI service
 
 ## Tutorials
 
@@ -86,4 +77,4 @@ To run tests:
 ```console
 $ vendor/bin/phpunit
 ```
-**Note**: see [phpunit.xml.dist](phpunit.xml.dist) for available test suites.
+**Note**: see [phpunit.xml.dist](https://github.com/oat-sa/lib-lti1p3-core/blob/master/phpunit.xml.dist) for available test suites.

@@ -1,6 +1,6 @@
 # AGS scopes permissions voter
 
-> How to use the [ScopePermissionVoter](../../src/Voter/ScopePermissionVoter.php) to check what is allowed to do as a tool from the AGS claim given by the platform at LTI launch time.
+> How to use the [ScopePermissionVoter](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Voter/ScopePermissionVoter.php) to check what is allowed to do as a tool from the AGS claim given by the platform at LTI launch time.
 
 During an LTI launch, the platform may provide an [AGS claim](https://www.imsglobal.org/spec/lti-ags/v2p0#example-service-claims) containing the list of allowed scopes:
 
@@ -16,7 +16,7 @@ During an LTI launch, the platform may provide an [AGS claim](https://www.imsglo
 }
 ```
 
-You can use the [ScopePermissionVoter](../../src/Voter/ScopePermissionVoter.php) to easily check what is allowed by the platform:
+You can use the [ScopePermissionVoter](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Voter/ScopePermissionVoter.php) to easily check what is allowed by the platform:
 
 ```php
 <?php

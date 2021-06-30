@@ -1,24 +1,14 @@
 # AGS Tool - Line Item service client
 
-> How to use the [LineItemServiceClient](../../src/Service/LineItem/Client/LineItemServiceClient.php) to perform authenticated AGS line item service calls as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
-    - [Get a line item](#get-a-line-item)
-    - [List line items](#list-line-items)
-    - [Create a line item](#create-a-line-item)
-    - [Update a line item](#update-a-line-item)
-    - [Delete a line item](#delete-a-line-item)
+> How to use the [LineItemServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Client/LineItemServiceClient.php) to perform authenticated AGS line item service calls as a tool.
 
 ## Features
 
-This library provides a [LineItemServiceClient](../../src/Service/LineItem/Client/LineItemServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow line items management as a tool on AGS service endpoints exposed by a platform.
+This library provides a [LineItemServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Client/LineItemServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow line items management as a tool on AGS service endpoints exposed by a platform.
 
 ## Usage
 
-You can find below how to use the [LineItemServiceClient](../../src/Service/LineItem/Client/LineItemServiceClient.php) methods to manage line items.
+You can find below how to use the [LineItemServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Client/LineItemServiceClient.php) methods to manage line items.
 
 ### Get a line item
 
@@ -121,7 +111,7 @@ $createdLineItem = $lineItemClient->createLineItem(
 echo $createdLineItem->getIdentifier();
 ```
 
-**Note**: you can also use the [LineItemFactory](../../src/Factory/LineItem/LineItemFactory.php) to help your line item creation.
+**Note**: you can also use the [LineItemFactory](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Factory/LineItem/LineItemFactory.php) to help your line item creation.
 
 ### Update a line item
 

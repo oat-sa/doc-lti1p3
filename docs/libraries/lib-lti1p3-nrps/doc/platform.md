@@ -1,15 +1,10 @@
 # NRPS Platform - Membership service server
 
-> How to use the [MembershipServiceServerRequestHandler](../src/Service/Server/Handler/MembershipServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to serve authenticated NRPS service calls as a platform.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [MembershipServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Server/Handler/MembershipServiceServerRequestHandler.php) (with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php)) to serve authenticated NRPS service calls as a platform.
 
 ## Features
 
-This library provides a [MembershipServiceServerRequestHandler](../src/Service/Server/Handler/MembershipServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle context and resource link membership requests.
+This library provides a [MembershipServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Server/Handler/MembershipServiceServerRequestHandler.php) ready to be use with the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) to handle context and resource link membership requests.
 
 - it accepts a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface),
 - leverages the [required IMS LTI 1.3 service authentication](https://www.imsglobal.org/spec/security/v1p0/#securing_web_services),
@@ -17,7 +12,7 @@ This library provides a [MembershipServiceServerRequestHandler](../src/Service/S
 
 ## Usage
 
-First, you need to provide a [MembershipServiceServerBuilderInterface](../src/Service/Server/Builder/MembershipServiceServerBuilderInterface.php) implementation, in charge to build memberships on tools context or resource link requests.
+First, you need to provide a [MembershipServiceServerBuilderInterface](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Server/Builder/MembershipServiceServerBuilderInterface.php) implementation, in charge to build memberships on tools context or resource link requests.
 
 ```php
 <?php
@@ -51,7 +46,8 @@ $builder = new class() implements MembershipServiceServerBuilderInterface
 ```
 
 Then:
-- you can construct the [MembershipServiceServerRequestHandler](../src/Service/Server/Handler/MembershipServiceServerRequestHandler.php) (constructed with your [MembershipServiceServerBuilderInterface](../src/Service/Server/Builder/MembershipServiceServerBuilderInterface.php) implementation)
+
+- you can construct the [MembershipServiceServerRequestHandler](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Server/Handler/MembershipServiceServerRequestHandler.php) (constructed with your [MembershipServiceServerBuilderInterface](https://github.com/oat-sa/lib-lti1p3-nrps/blob/master/src//Service/Server/Builder/MembershipServiceServerBuilderInterface.php) implementation)
 - to finally expose it to requests using the core [LtiServiceServer](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Service/Server/LtiServiceServer.php) (constructed with the [RequestAccessTokenValidator](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/OAuth2/Validator/RequestAccessTokenValidator.php), from core library)
 
 ```php

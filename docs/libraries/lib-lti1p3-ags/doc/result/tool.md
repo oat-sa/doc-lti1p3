@@ -1,15 +1,10 @@
 # AGS Tool - Result service client
 
-> How to use the [ResultServiceClient](../../src/Service/Result/Client/ResultServiceClient.php) to perform authenticated AGS results retrieval as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [ResultServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Client/ResultServiceClient.php) to perform authenticated AGS results retrieval as a tool.
 
 ## Features
 
-This library provides a [ResultServiceClient](../../src/Service/Result/Client/ResultServiceClient.php)  (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow results retrieval as a tool.
+This library provides a [ResultServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Client/ResultServiceClient.php)  (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow results retrieval as a tool.
 
 ## Usage
 

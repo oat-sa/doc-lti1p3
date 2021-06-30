@@ -1,15 +1,10 @@
 # AGS Tool - Score service client
 
-> How to use the [ScoreServiceClient](../../src/Service/Score/Client/ScoreServiceClient.php) to perform authenticated AGS scores publications as a tool.
-
-## Table of contents
-
-- [Features](#features)
-- [Usage](#usage)
+> How to use the [ScoreServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Score/Client/ScoreServiceClient.php) to perform authenticated AGS scores publications as a tool.
 
 ## Features
 
-This library provides a [ScoreServiceClient](../../src/Service/Score/Client/ScoreServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow scores publications as a tool.
+This library provides a [ScoreServiceClient](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Score/Client/ScoreServiceClient.php) (based on the [core LtiServiceClient](https://github.com/oat-sa/lib-lti1p3-core/blob/master/doc/service/service-client.md)) that allow scores publications as a tool.
 
 ## Usage
 
@@ -42,4 +37,4 @@ if ($isPublished) {
 }
 ```
 
-**Note**: you can use the [ScoreFactory](../../src/Factory/Score/ScoreFactory.php) to ease your score creation.
+**Note**: you can use the [ScoreFactory](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Factory/Score/ScoreFactory.php) to ease your score creation.

@@ -1,22 +1,16 @@
-# Library interfaces
+# AGS library interfaces
 
 > Depending on the AGS services you want to provide as a platform, you have to provide your own implementations of the following interfaces.
-
-## Table of contents
-
-- [Line item repository interface](#line-item-repository-interface)
-- [Score repository interface](#score-repository-interface)
-- [Result repository interface](#result-repository-interface)
-
 
 ### Line item repository interface
 
 **Required by**:
-- [line item service](../../src/Service/LineItem/Server/Handler)
-- [score service](../../src/Service/Score/Server/Handler)
-- [result service](../../src/Service/Result/Server/Handler)
 
-In order to manage your line items, you need to provide an implementation of the [LineItemRepositoryInterface](../../src/Repository/LineItemRepositoryInterface.php).
+- [line item service](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/LineItem/Server/Handler)
+- [score service](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Score/Server/Handler)
+- [result service](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Server/Handler)
+
+In order to manage your line items, you need to provide an implementation of the [LineItemRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/LineItemRepositoryInterface.php).
 
 For example:
 
@@ -56,15 +50,17 @@ $lineItemRepository = new class implements LineItemRepositoryInterface
 };
 ```
 **Notes**: 
+
 - the `save()` method will be called by the LTI service handlers for **both line items creation and update**, up to you to handle line items identifier generation the way you want in case of creation
-- a simple implementation example can be found in the [library tests](../../tests/Traits/AgsDomainTestingTrait.php)
+- a simple implementation example can be found in the [library tests](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/tests/Traits/AgsDomainTestingTrait.php)
 
 ### Score repository interface
 
 **Required by**:
-- [score service](../../src/Service/Score/Server/Handler)
 
-In order to manage your scores, you need to provide an implementation of the [ScoreRepositoryInterface](../../src/Repository/ScoreRepositoryInterface.php).
+- [score service](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Score/Server/Handler)
+
+In order to manage your scores, you need to provide an implementation of the [ScoreRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/ScoreRepositoryInterface.php).
 
 For example:
 
@@ -83,15 +79,17 @@ $scoreRepository = new class implements ScoreRepositoryInterface
 };
 ```
 **Notes**:
+
 - the interface does not provide methods to find scores, up to you to add dedicated methods in your repository implementation to handle this the way you want
-- a simple implementation example can be found in the [library tests](../../tests/Traits/AgsDomainTestingTrait.php)
+- a simple implementation example can be found in the [library tests](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/tests/Traits/AgsDomainTestingTrait.php)
 
 ### Result repository interface
 
 **Required by**:
-- [result service](../../src/Service/Result/Server/Handler)
 
-In order to be able to manage your results, you need to provide an implementation of the [ResultRepositoryInterface](../../src/Repository/ResultRepositoryInterface.php).
+- [result service](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Service/Result/Server/Handler)
+
+In order to be able to manage your results, you need to provide an implementation of the [ResultRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Repository/ResultRepositoryInterface.php).
 
 For example:
 
@@ -121,6 +119,7 @@ $resultRepository = new class implements ResultRepositoryInterface
 };
 ```
 **Notes**:
+
 - the interface does not provide methods to persist results, p to you to add dedicated methods in your repository implementation to handle this the way you want
 - as per [AGS specifications](https://www.imsglobal.org/spec/lti-ags/v2p0#container-request-filters-0)  , the `findByLineItemIdentifierAndUserIdentifier()` method must return the most relevant result for a given line item and  user
-- a simple implementation example can be found in the [library tests](../../tests/Traits/AgsDomainTestingTrait.php)
+- a simple implementation example can be found in the [library tests](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/tests/Traits/AgsDomainTestingTrait.php)
