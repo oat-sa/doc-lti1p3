@@ -30,7 +30,6 @@ theme:
   logo: 'assets/images/logo.png'
   favicon: 'assets/images/favicon.png'
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.tabs
