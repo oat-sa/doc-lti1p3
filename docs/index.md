@@ -5,7 +5,7 @@
 > 
 > - a set of [PHP libraries](#php-libraries) for each [LTI 1.3 Advantage](http://www.imsglobal.org/lti-advantage-overview) specifications
 > - a [Symfony bundle](#symfony-bundle) to ease their usage in your Symfony application
-> - a [DevKit](#devkit) to help you test your LTI 1.3 integrations
+> - a [DevKit](#devkit) (built with this framework) to help you test your LTI 1.3 integrations
 
 ## PHP libraries
 
