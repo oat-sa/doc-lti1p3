@@ -59,7 +59,7 @@ Once set up, tools can request access tokens by following the [client_credential
 
 Request example:
 
-```shell script
+```shell
 POST /lti1p3/auth/platformKey/token HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
@@ -72,7 +72,7 @@ grant_type=client_credentials
 
 As a response, the [OAuth2AccessTokenCreationAction](https://github.com/oat-sa/bundle-lti1p3/blob/master/Action/Platform/Service/OAuth2AccessTokenCreationAction.php) will offer an access token (following OAuth2 standards), valid for `3600 seconds`:
 
-```shell script
+```shell
 HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
 Cache-Control: no-store
