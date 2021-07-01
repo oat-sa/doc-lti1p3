@@ -3,8 +3,8 @@
 >[![IMS certifications](assets/images/ims-cert.png){ align=right width=125x height=125px }](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit)
 >[IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for [LTI 1.3 platforms and / or tools](http://www.imsglobal.org/spec/lti/v1p3/#platforms-and-tools) implementations, providing:
 > 
-> - a set of [PHP libraries](#php-libraries) (for each [LTI 1.3 Advantage](http://www.imsglobal.org/lti-advantage-overview) specifications)
-> - a [Symfony bundle](#symfony-bundle) (to ease their usage in your Symfony application)
+> - a set of [PHP libraries](#php-libraries) for each [LTI 1.3 Advantage](http://www.imsglobal.org/lti-advantage-overview) specifications
+> - a [Symfony bundle](#symfony-bundle) to ease their usage in your Symfony application
 > - a [DevKit](#devkit) to help you test your LTI 1.3 integrations
 
 ## PHP libraries
