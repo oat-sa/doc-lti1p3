@@ -22,7 +22,7 @@ PHP frameworks agnostic (only relying on [PSR](https://www.php-fig.org/psr/)) LT
 
 ## Symfony bundle
 
-[:fontawesome-brands-symfony: Symfony](https://symfony.com/) bundle to ease the LTI 1.3 libraries usage in your Symfony application.
+[:fontawesome-brands-symfony: Symfony](https://symfony.com/) bundle to ease the LTI 1.3 PHP libraries usage in your Symfony application.
 
 | Bundle                                                                                | Latest version                                                                                                                                              | Platform support                             | Tool support                                  | Documentation                                                                        |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------|
