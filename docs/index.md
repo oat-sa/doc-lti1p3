@@ -1,6 +1,11 @@
-# [TAO](https://taotesting.com) - LTI 1.3 PHP framework
+# [![IMS certifications](assets/images/logo.png){ width=40px height=40px }    TAO](https://taotesting.com) - LTI 1.3 PHP framework
 
-> [![IMS certifications](assets/images/ims-cert.png){ align=right width=100px height=100px }IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for LTI 1.3 platform and / or tool implementations.
+>![IMS certifications](assets/images/ims-cert.png){ align=right width=125x height=125px }
+>[IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) set of [open source PHP repositories](https://github.com/oat-sa?q=lti1p3) for [LTI 1.3 platforms and / or tools](http://www.imsglobal.org/spec/lti/v1p3/#platforms-and-tools) implementations, providing:
+> 
+> - a set of [PHP libraries](#php-libraries) (for each [LTI 1.3 Advantage](http://www.imsglobal.org/lti-advantage-overview) specifications)
+> - a [Symfony bundle](#symfony-bundle) (to ease their usage in your Symfony application)
+> - a [DevKit](#devkit) to help you test your LTI 1.3 integrations
 
 ## PHP libraries
 
@@ -17,7 +22,7 @@ Open source and PHP frameworks agnostic (only relying on [PSR](https://www.php-f
 
 ## Symfony bundle
 
-[:fontawesome-brands-symfony: Symfony](https://symfony.com/) bundle to automate the LTI 1.3 libraries usage in your application.
+[:fontawesome-brands-symfony: Symfony](https://symfony.com/) bundle to ease the LTI 1.3 libraries usage in your Symfony application.
 
 | Bundle                                                                                | Latest version                                                                                                                                              | Platform support                             | Tool support                                  | Documentation                                                                        |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|--------------------------------------------------------------------------------------|
