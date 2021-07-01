@@ -9,7 +9,7 @@
 
 ## PHP libraries
 
-Open source and PHP frameworks agnostic (only relying on [PSR](https://www.php-fig.org/psr/)) LTI 1.3 libraries.
+PHP frameworks agnostic (only relying on [PSR](https://www.php-fig.org/psr/)) LTI 1.3 libraries.
 
 | Library                                                                    | Latest version                                                                                                                                                               | Platform support                             | Tool support                                  | Documentation                                                                                  |
 |----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------|
