@@ -284,7 +284,7 @@ security:
             lti1p3_service: { scopes: ['https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'] }
 ```
 
-- at this point, your application now offers a new endpoint `[GET] /platform/service/nrps`, that automates:
+At this point, your application now offers a new endpoint `[GET] /platform/service/nrps`, that automates:
   
   - HTTP method validation
   - NRPS content type validation
