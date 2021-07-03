@@ -1,4 +1,4 @@
-# LTI 1.3 Basic Outcome Library
+# TAO - LTI 1.3 Basic Outcome Library
 
 [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-basic-outcome.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-basic-outcome/tags)
 [![License GPL2](http://img.shields.io/badge/licence-GPL%202.0-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
@@ -7,9 +7,13 @@
 [![Psalm Level Status](https://shepherd.dev/github/oat-sa/lib-lti1p3-basic-outcome/level.svg)](https://shepherd.dev/github/oat-sa/lib-lti1p3-basic-outcome)
 [![Packagist Downloads](http://img.shields.io/packagist/dt/oat-sa/lib-lti1p3-basic-outcome.svg)](https://packagist.org/packages/oat-sa/lib-lti1p3-basic-outcome)
 
-> PHP library for [LTI 1.3 Basic Outcome](https://www.imsglobal.org/spec/lti-bo/v1p1) implementations as platforms and / or as tools, based on [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core).
+> PHP library for [LTI 1.3 Basic Outcome](https://www.imsglobal.org/spec/lti-bo/v1p1) implementations as [platforms and / or as tools](http://www.imsglobal.org/spec/lti/v1p3/#platforms-and-tools), based on [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core).
 
-## Specifications
+## IMS
+
+You can find below [IMS](https://www.imsglobal.org/) related information.
+
+### Related specifications
 
 - [IMS LTI 1.3 Basic Outcome Service](https://www.imsglobal.org/spec/lti-bo/v1p1)
 - [IMS LTI 1.3 Core](http://www.imsglobal.org/spec/lti/v1p3)
@@ -21,9 +25,9 @@
 $ composer require oat-sa/lib-lti1p3-basic-outcome
 ```
 
-## Tutorials
+## Documentation
 
-You can then find below usage tutorials, presented by topics.
+You can find below the library documentation, presented by topics.
 
 ### Configuration
 
@@ -31,11 +35,11 @@ You can then find below usage tutorials, presented by topics.
 
 ### Platform
 
-- how to [use the Basic Outcome library as a platform](doc/platform.md)
+- how to [use the basic outcome library as a platform](doc/platform.md)
 
 ### Tool
 
-- how to [use the Basic Outcome library as a tool](doc/tool.md)
+- how to [use the basic outcome library as a tool](doc/tool.md)
 
 ## Tests
 

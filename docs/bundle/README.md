@@ -1,4 +1,4 @@
-# LTI 1.3 Symfony Bundle
+# TAO - LTI 1.3 Symfony Bundle
 
 [![Latest Version](https://img.shields.io/github/tag/oat-sa/bundle-lti1p3.svg?style=flat&label=release)](https://github.com/oat-sa/bundle-lti1p3/tags)
 [![License GPL2](http://img.shields.io/badge/licence-LGPL%202.1-blue.svg)](http://www.gnu.org/licenses/lgpl-2.1.html)
@@ -6,10 +6,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/oat-sa/bundle-lti1p3/badge.svg?branch=master)](https://coveralls.io/github/oat-sa/bundle-lti1p3?branch=master)
 [![Psalm Level Status](https://shepherd.dev/github/oat-sa/bundle-lti1p3/level.svg)](https://shepherd.dev/github/oat-sa/bundle-lti1p3)
 [![Packagist Downloads](http://img.shields.io/packagist/dt/oat-sa/bundle-lti1p3.svg)](https://packagist.org/packages/oat-sa/bundle-lti1p3)
+[![IMS Certified](https://img.shields.io/badge/IMS-certified-brightgreen)](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit)
 
-> [Symfony](https://symfony.com/) bundle for [LTI 1.3](http://www.imsglobal.org/spec/lti/v1p3) implementations, as platforms and / or as tools.
+> [IMS certified](https://site.imsglobal.org/certifications/open-assessment-technologies-sa/tao-lti-13-devkit) [Symfony](https://symfony.com/) bundle for [LTI 1.3](http://www.imsglobal.org/spec/lti/v1p3) implementations, as [platforms and / or as tools](http://www.imsglobal.org/spec/lti/v1p3/#platforms-and-tools).
 
-This bundle automates the usage of the [LTI 1.3 Core library](https://github.com/oat-sa/lib-lti1p3-core) within your Symfony application.
+This bundle automates the usage of the [TAO LTI 1.3 PHP framework libraries](https://oat-sa.github.io/doc-lti1p3/libraries/lib-lti1p3-core/) within your Symfony application.
 
 ## Installation
 
@@ -23,9 +24,9 @@ The associated [flex recipe](https://github.com/symfony/recipes-contrib/tree/mas
  - `config/packages/lti1p3.yaml`: configurable bundle configuration
  - `LTI1P3_SERVICE_ENCRYPTION_KEY`: configurable (.env) variable (signatures security)
 
-## Tutorials
+## Documentation
 
-You can find below some tutorials, presented by topics.
+You can find below the bundle documentation, presented by topics.
 
 ### Quick start
 
