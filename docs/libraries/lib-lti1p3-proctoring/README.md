@@ -1,4 +1,4 @@
-# TAO -LTI 1.3 Proctoring Library
+# TAO - LTI 1.3 Proctoring Library
 
 [![Latest Version](https://img.shields.io/github/tag/oat-sa/lib-lti1p3-proctoring.svg?style=flat&label=release)](https://github.com/oat-sa/lib-lti1p3-proctoring/tags)
 [![License GPL2](http://img.shields.io/badge/licence-GPL%202.0-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
