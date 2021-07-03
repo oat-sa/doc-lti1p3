@@ -40,12 +40,12 @@ You can then find below the library documentation, presented by topics.
 
 ### Messages
 
-- how to [implement the proctoring messages workflow (for platform and / or tool)](doc/message/proctoring-workflow.md)
+- how to [implement the proctoring messages workflow (as platform and / or tool)](doc/message/proctoring-workflow.md)
 
 ### Services
 
-- how to [use the library for ACS as a tool](doc/service/tool.md)
 - how to [use the library for ACS as a platform](doc/service/platform.md)
+- how to [use the library for ACS as a tool](doc/service/tool.md)
 
 ## Tests
 

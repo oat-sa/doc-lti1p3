@@ -40,7 +40,7 @@ You can find below the library documentation, presented by topics.
 
 ### Workflow
 
-- how to [implement the deep linking workflow (for platform and / or tool)](doc/deep-linking-workflow.md)
+- how to [implement the deep linking workflow (as platform and / or tool)](doc/deep-linking-workflow.md)
 
 ## Tests
 

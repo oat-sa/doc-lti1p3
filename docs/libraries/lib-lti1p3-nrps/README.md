@@ -38,13 +38,13 @@ You can find below the library documentation, presented by topics.
 
 - how to [configure the underlying LTI 1.3 Core library](../lib-lti1p3-core/doc/quickstart/configuration.md)
 
-### Tool
-
-- how to [use the NRPS library as a tool](doc/tool.md)
-
 ### Platform
 
 - how to [use the NRPS library as a platform](doc/platform.md)
+
+### Tool
+
+- how to [use the NRPS library as a tool](doc/tool.md)
 
 ## Tests
 
