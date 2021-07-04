@@ -211,7 +211,7 @@ It can be handled with the [OidcAuthenticator](https://github.com/oat-sa/lib-lti
 
 - it requires a registration repository and a [UserAuthenticatorInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/User/UserAuthenticatorInterface.php) implementation [as explained here](../quickstart/interfaces.md)
 - it expects a [PSR7 ServerRequestInterface](https://www.php-fig.org/psr/psr-7/#321-psrhttpmessageserverrequestinterface) to handle
-- it will output a [LtiMessageInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php) that cab be used to redirect to the tool to finish the OIDC flow.
+- it will output a [LtiMessageInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/LtiMessageInterface.php) that can be used to redirect to the tool to finish the OIDC flow.
 
 You have to specify how to provide platform authentication, for example:
 
