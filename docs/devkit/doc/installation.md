@@ -54,7 +54,7 @@ You can access:
 
 ### Platforms, tools and registrations
 
-Since this development kit application relies on [LTI 1.3 symfony bundle](https://github.com/oat-sa/bundle-lti1p3), you can find [here](https://github.com/oat-sa/bundle-lti1p3/blob/master/doc/quickstart/configuration.md) instructions to configure it.
+Since this development kit application relies on [LTI 1.3 symfony bundle](https://github.com/oat-sa/bundle-lti1p3), you can find [here](../../bundle/doc/quickstart/configuration.md) instructions to configure it.
 
 ### Customization
 
