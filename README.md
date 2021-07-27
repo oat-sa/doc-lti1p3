@@ -1,4 +1,4 @@
-# LTI 1.3 PHP framework documentation
+# TAO LTI 1.3 PHP framework documentation
 
 > TAO LTI 1.3 PHP framework documentation, powered by [Github Pages](https://pages.github.com/).
 
