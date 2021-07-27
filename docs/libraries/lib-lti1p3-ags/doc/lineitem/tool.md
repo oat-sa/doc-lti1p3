@@ -40,6 +40,11 @@ echo $lineItem->getIdentifier();
 echo $lineItem->getScoreMaximum();
 ```
 
+**Notes**:
+
+- you can use the method `getLineItemForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
+- you can use the method `getLineItemForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
+
 ### List line items
 
 To list line items:
@@ -82,6 +87,11 @@ if ($lineItemContainer->hasNext()) {
 ...
 ```
 
+**Notes**:
+
+- you can use the method `listLineItemsForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
+- you can use the method `listLineItemsForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
+
 ### Create a line item
 
 To create a line item:
@@ -111,7 +121,11 @@ $createdLineItem = $lineItemClient->createLineItem(
 echo $createdLineItem->getIdentifier();
 ```
 
-**Note**: you can also use the [LineItemFactory](https://github.com/oat-sa/lib-lti1p3-ags/blob/master/src/Factory/LineItem/LineItemFactory.php) to help your line item creation.
+**Notes**:
+
+- you can use the method `createLineItemForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
+- you can use the method `createLineItemForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
+- you can also use the [LineItemFactory](../../src/Factory/LineItem/LineItemFactory.php) to help your line item creation
 
 ### Update a line item
 
@@ -142,6 +156,11 @@ $updatedLineItem = $lineItemClient->updateLineItem(
 echo $updatedLineItem->getScoreMaximum();
 ```
 
+**Notes**:
+
+- you can use the method `updateLineItemForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
+- you can use the method `updateLineItemForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
+
 ### Delete a line item
 
 To delete a line item:
@@ -168,3 +187,9 @@ if ($isDeleted) {
     // Deletion success
 }
 ```
+
+**Notes**:
+
+- you can use the method `deleteLineItemForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
+- you can use the method `deleteLineItemForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
+
