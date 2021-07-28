@@ -10,15 +10,6 @@ This library provides a [BasicOutcomeServiceClient](https://github.com/oat-sa/li
 - [replace result](https://www.imsglobal.org/spec/lti-bo/v1p1#replaceresult)
 - [delete result](https://www.imsglobal.org/spec/lti-bo/v1p1#deleteresult)
 
-You can use:
-
-- `readResultForPayload()` to [read a result](https://www.imsglobal.org/spec/lti-bo/v1p1#readresult) for a received LTI message payload
-- `readResult()` to [read a result](https://www.imsglobal.org/spec/lti-bo/v1p1#readresult) from a given basic outcome url and result sourced id
-- `replaceResultForPayload()` to [replace a result](https://www.imsglobal.org/spec/lti-bo/v1p1#replaceresult) for a received LTI message payload, with given score and language
-- `replaceResult()` to [replace a result](https://www.imsglobal.org/spec/lti-bo/v1p1#replaceresult) for a given basic outcome url, result sourced id, score and language
-- `deleteResultForPayload()` to [delete a result](https://www.imsglobal.org/spec/lti-bo/v1p1#deleteresult) for a received LTI message payload
-- `deleteResult()` to [delete a result](https://www.imsglobal.org/spec/lti-bo/v1p1#deleteresult) for a given basic outcome url and result sourced id
-
 ## Usage
 
 ### Read a result
@@ -42,10 +33,16 @@ $client = new BasicOutcomeServiceCLient();
 
 $response = $client->readResultForPayload(
     $registration, // [required] as the tool, it will call the platform of this registration
-    $payload       // [required] from the LTI message payload containing the basic outcome claim result sourced id (got at LTI launch)
+    $payload       // [required] for the LTI message payload containing the basic outcome claim result sourced id (got at LTI launch)
 );
 
-// or you also can directly read a result from given URL and result sourced id (avoid claim construction)
+// you also can directly read a result for a given basic outcome claim
+$response = $client->readResultForClaim(
+    $registration,               // [required] as the tool, it will call the platform of this registration
+    $payload->getBasicOutcome()  // [required] for the basic outcome claim result sourced id (got at LTI launch)
+);
+
+// or you also can directly read a result from given URL and result sourced id
 $response = $client->readResult(
     $registration,                         // [required] as the tool, it will call the platform of this registration
     'https://example.com/basic-outcome',   // [required] to a given basic outcome service url
@@ -95,7 +92,15 @@ $response = $client->replaceResultForPayload(
     'en'           // [optional] for a given language
 );
 
-// or you also can directly replace a result on given URL, result sourced id, score and language (avoid claim construction)
+// you also can directly replace a result for a given basic outcome claim, score and language
+$response = $client->replaceResultForClaim(
+    $registration,                // [required] as the tool, it will call the platform of this registration
+    $payload->getBasicOutcome(),  // [required] for the basic outcome claim result sourced id (got at LTI launch)
+    0.42,                         // [required] for a given score
+    'en'                          // [optional] for a given language
+);
+
+// or you also can directly replace a result on given URL, result sourced id, score and language
 $response = $client->replaceResult(
     $registration,                         // [required] as the tool, it will call the platform of this registration
     'https://example.com/basic-outcome',   // [required] to a given basic outcome service url
@@ -139,7 +144,13 @@ $response = $client->deleteResultForPayload(
     $payload       // [required] for the LTI message payload containing the basic outcome claim result sourced id (got at LTI launch)
 );
 
-// or you also can directly delete a result on given URL and result sourced id (avoid claim construction)
+// you also can directly delete a result for a given basic outcome claim
+$response = $client->deleteResultForClaim(
+    $registration,                // [required] as the tool, it will call the platform of this registration
+    $payload->getBasicOutcome()   // [required] for the basic outcome claim result sourced id (got at LTI launch)
+);
+
+// or you also can directly delete a result on given URL and result sourced id
 $response = $client->deleteResult(
     $registration,                         // [required] as the tool, it will call the platform of this registration
     'https://example.com/basic-outcome',   // [required] to a given basic outcome service url
