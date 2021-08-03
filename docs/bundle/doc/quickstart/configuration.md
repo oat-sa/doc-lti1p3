@@ -80,6 +80,7 @@ lti1p3:
 ```
 **Notes**:
 
+- optional keys can be omitted
 - the unique identifier `myKey` can be used from the [KeyChainRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Security/Key/KeyChainRepositoryInterface.php#L27)
 - the key set name `myKeySetName` can be used to group key chains together, like by example in the [JwksAction](https://github.com/oat-sa/bundle-lti1p3/blob/master/Action/Jwks/JwksAction.php)
 
@@ -99,6 +100,7 @@ lti1p3:
 ```
 **Notes**:
 
+- optional keys can be omitted
 - the unique identifier `myPlatform` can be used into registrations creation (ex: `platform: "myPlatform"`)
 - the `audience` will be used in JWT based communications as issuer 
 - the `oidc_authentication_url` is automated by the [OidcAuthenticationAction](https://github.com/oat-sa/bundle-lti1p3/blob/master/Action/Platform/Message/OidcAuthenticationAction.php)
@@ -121,6 +123,7 @@ lti1p3:
 ```
 **Notes**:
 
+- optional keys can be omitted
 - the unique identifier `myTool` can be used into registrations creation (ex: `tool: "myTool"`)
 - the `audience` will be used in JWT based communications as issuer 
 - the `oidc_initiation_url` is handled by the [OidcInitiationAction](https://github.com/oat-sa/bundle-lti1p3/blob/master/Action/Tool/Message/OidcInitiationAction.php)
@@ -146,11 +149,14 @@ lti1p3:
             tool_key_chain: "myToolKey"                                                        # [optional] tool key chain identifier
             platform_jwks_url: "http://platform.com/lti1p3/.well-known/jwks/platformSet.json"  # [optional] platform JWKS url
             tool_jwks_url: "http://tool.com/lti1p3/.well-known/jwks/toolSet.json"              # [optional] tool JWKS url
+            order: 1                                                                           # [optional] order of the registration
 ```
 **Notes**:
 
+- optional keys can be omitted
 - the unique identifier `myRegistration` allows the registration to be fetched from the [RegistrationRepositoryInterface](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Registration/RegistrationRepositoryInterface.php#L27)
 - the client id `myClientId` will be used in JWT based communications as client_id
 - the defined `myTool` tool will be registered for the defined `myPlatform` platform
 - the `myPlatformKey` and `myToolKey` key chains will be used to sign respectively from `myPlatform` and `myTool`
 - the JWKS urls are exposed by the [JwksAction](https://github.com/oat-sa/bundle-lti1p3/blob/master/Action/Jwks/JwksAction.php) (if you own them)
+- the `order` can be used to order registration (integer value), all non ordered registrations will go last, in declaration order
