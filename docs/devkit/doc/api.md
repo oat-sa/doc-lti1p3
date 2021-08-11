@@ -1,15 +1,15 @@
 # HTTP API documentation
 
-## Security
+## HTTP API security
 
-Since this development kit can be registered with real LMS production instances, the API HTTP endpoints are **protected by an API key**.
+Since this development kit can be registered with real LMS production instances, the HTTP API endpoints are **protected by an API key**.
 
-This API key is configurable on the [.env](https://github.com/oat-sa/devkit-lti1p3/blob/master/.env) file, in the `APP_API_KEY` environment variable.
+This API key is configurable on the [.env](../.env) file, in the `APP_API_KEY` environment variable.
 
-Every API HTTP endpoint request must provide this key as a token bearer via the request header `Authorization: Bearer <token>`.
+Every HTTP API endpoint request must provide this key as a token bearer via the request header `Authorization: Bearer <token>`.
 
-## HTTP endpoints
+## HTTP API endpoints
 
-You can find below the available API HTTP endpoints offered by the development kit.
+The development kit HTTP endpoints are described below (and also available on [the development kit repository](https://github.com/oat-sa/devkit-lti1p3/blob/master/doc/openapi/devkit.yaml)).
 
 !!swagger-http https://raw.githubusercontent.com/oat-sa/devkit-lti1p3/master/doc/openapi/devkit.yaml!!
