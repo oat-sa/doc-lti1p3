@@ -13,6 +13,9 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+plugins:
+  - render_swagger
+
 theme:
   name: material
   palette:
