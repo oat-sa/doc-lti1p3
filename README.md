@@ -14,10 +14,18 @@ The MkDocs theme documentation is available at [https://squidfunk.github.io/mkdo
 
 ### Previewing as you write
 
-You can live preview changes as you write documentation by using docker (avoid useless refresh triggers on Github Pages):
+You can live preview changes as you write documentation by using the provided [Dockerfile](Dockerfile) (to avoid useless refresh triggers on Github Pages):
+
+First build:
 
 ```shell
-docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+docker build -t doc-lti1p3 .
 ```
 
-Then simply access [http://localhost:8000](http://localhost:8000). 
+Then run:
+
+```shell
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs doc-lti1p3
+```
+
+Finally, simply access [http://localhost:8000](http://localhost:8000). 
