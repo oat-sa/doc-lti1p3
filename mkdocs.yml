@@ -14,6 +14,7 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
+  - search
   - render_swagger
 
 theme:
@@ -94,6 +95,9 @@ nav:
         - 'LTI services':
             - 'Platform': 'libraries/lib-lti1p3-proctoring/doc/service/platform.md'
             - 'Tool': 'libraries/lib-lti1p3-proctoring/doc/service/tool.md'
+    - 'Submission review library':
+        - 'Overview': 'libraries/lib-lti1p3-submission-review/README.md'
+        - 'LTI messages': 'libraries/lib-lti1p3-submission-review/doc/message/submission-review-workflow.md'
   - 'Symfony bundle':
       - 'Overview': 'bundle/README.md'
       - 'Quick start':
