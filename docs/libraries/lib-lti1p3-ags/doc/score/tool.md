@@ -41,4 +41,4 @@ if ($isPublished) {
 
 - you can use the method `publishScoreForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
 - you can use the method `publishScoreForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
-- you can use the [ScoreFactory](../../src/Factory/Score/ScoreFactory.php) to ease your score creation
+- you can use the [ScoreFactory](https://github.com/oat-sa/lib-lti1p3-ags/blob/main/src/Factory/Score/ScoreFactory.php) to ease your score creation

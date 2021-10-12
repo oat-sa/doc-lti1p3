@@ -108,7 +108,7 @@ nav:
           - 'Tool': 'bundle/doc/message/tool.md'
       - 'LTI services':
           - 'Platform': 'bundle/doc/service/platform.md'
-          - 'Tool': 'bundle/doc/service/platform.md'
+          - 'Tool': 'bundle/doc/service/tool.md'
   - 'DevKit':
       - 'Overview': 'devkit/README.md'
       - 'Installation': 'devkit/doc/installation.md'

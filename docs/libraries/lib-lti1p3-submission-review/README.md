@@ -56,4 +56,4 @@ To run tests:
 ```console
 $ vendor/bin/phpunit
 ```
-**Note**: see [phpunit.xml.dist](phpunit.xml.dist) for available test suites.
+**Note**: see [phpunit.xml.dist](https://github.com/oat-sa/lib-lti1p3-submission-review/blob/main/phpunit.xml.dist) for available test suites.

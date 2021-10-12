@@ -125,7 +125,7 @@ echo $createdLineItem->getIdentifier();
 
 - you can use the method `createLineItemForClaim()` to work directly with an [AGS claim](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/Claim/AgsClaim.php) received at launch
 - you can use the method `createLineItemForPayload()` to work directly with an [LTI message payload](https://github.com/oat-sa/lib-lti1p3-core/blob/master/src/Message/Payload/LtiMessagePayloadInterface.php) received at launch
-- you can also use the [LineItemFactory](../../src/Factory/LineItem/LineItemFactory.php) to help your line item creation
+- you can also use the [LineItemFactory](https://github.com/oat-sa/lib-lti1p3-ags/blob/main/src/Factory/LineItem/LineItemFactory.php) to help your line item creation
 
 ### Update a line item
 
